@@ -1,4 +1,4 @@
-import MegjelenitSor from "./MegjelenitSor.js";
+import MegjelenitSor from "./MegjelenitSorView.js";
 class Megjelenit {
     #lista
     #adatTar
@@ -10,8 +10,8 @@ class Megjelenit {
         this.megjelenit();
     }
     megjelenit() {
-        this.#lista.forEach((element) => {
-            new MegjelenitSor(element,this.#adatTar)
+        this.#lista.forEach((element,index) => {
+            new MegjelenitSor(element,this.#adatTar, index)
         });
     }
         
